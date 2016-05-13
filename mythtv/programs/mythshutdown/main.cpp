@@ -650,7 +650,7 @@ static int shutdown()
 
     int shutdownmode = 0; // default to poweroff no reboot
     QString nvramRestartCmd =
-            gCoreContext->GetSetting("MythShutdownNvramRestartCmd", "");
+            gCoreContext->GetSetting("MythShutdownNvramRestartCmd", "").trimmed();
 
     if (dtWakeupTime.isValid())
     {
